@@ -1,0 +1,43 @@
+
+@import "./variables";
+@media all and (max-width: 600px){
+    body{
+        width: auto;
+        margin: auto;
+        
+    }
+    .container-header{
+        width: 100%;
+        height: 200px;
+          img{
+              width: 50%;
+              margin: 1.5rem 25%;   
+          }
+        
+          &__logo{
+              width: 100%;
+              height: 5rem;
+              box-shadow: 0px 2px 2px black;  
+          }
+          &__lieu{
+              padding: 10px 35%;
+              width: 100%;
+              height: 30px;
+              background-color: rgba(234, 234, 234, .8);
+          }
+          &__explorez{
+              background-color: rgb(246, 246, 246);
+              margin-top: -5px;
+              text-align: center;
+              font-size: 10px;
+              h2{font-weight: 1;}
+              padding: 1rem 2rem;
+                button{
+                    background-image: linear-gradient(160deg, $secondaire, $primaire 90% );
+                    border-radius: 20px;
+                    border: none;
+                    padding: 10px 20px;
+                }
+          }
+    }
+}
