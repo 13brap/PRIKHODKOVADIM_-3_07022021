@@ -1,6 +1,7 @@
 
 @import "./variables";
 @import "./mixin";
+@import "./keyframes";
 @media all and (max-width: 600px){
     body{
         width: auto;
@@ -38,6 +39,7 @@
                     border-radius: 20px;
                     border: none;
                     padding: 10px 20px;
+                    cursor: pointer;
                 }
           }
          
@@ -60,10 +62,24 @@
               position: relative;
               padding-left: 10%;
               cursor: pointer;
+              transition: background-color 400ms;
+              opacity: 0;
                 &:hover{
                    background-color: rgba(147, 86, 220, .3);
                    
                }
+          }
+          &__apparition1{
+              transform-origin: bottom;
+              animation: apparition 1s forwards;
+          }
+          &__apparition2{
+            transform-origin: bottom;
+            animation: apparition 1.3s 200ms forwards;
+          }
+          &__apparition3{
+            transform-origin: bottom;
+            animation: apparition 1.5s 400ms forwards;
           }
           span{
               padding: 6px 8px; 
@@ -75,6 +91,78 @@
               margin-left: -14%;
               margin-bottom: 30%;
           }
+    }
+    .container-cartes{
+        width: 100%;
+        height: auto;
+        @include bckgr-grey;
+          &__cartes{
+              margin-top: 20px;
+              cursor: pointer;
+          }
+          &__image{
+              height: 200px;
+              width: 90%;
+              @include shadow;
+              margin: auto;
+              border-radius: 20px;
+              background-image: url("restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              z-index: 0;
+              
+          }
+          &__pied{
+            width: 90%;
+            height: 50px;
+            background-color: white;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px ;
+            z-index: 1;
+            margin: auto;
+            margin-top: -64px;
+            h2 {font-size: 17px; margin-left: 10px;}
+            p {font-size: 15px; margin-top: -10px; margin-left: 10px;}
+        }
+        &__coeur{
+            color: silver;
+            margin-left: 80%;
+            margin-top: -10%;
+            position: absolute;
+            cursor: pointer;
+            z-index: 1;
+            opacity: 0;
+        }
+        &__coeurplein{
+            color: silver;
+            margin-left: 80%;
+            margin-top: -10%;
+            position: absolute;
+            cursor: pointer;
+            z-index: 2;
+            opacity: 1;
+        }
+        &__input{
+            margin-left: 80%;
+            margin-top: -10%;
+            z-index: 3;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+             &:checked + .container-cartes__coeurplein{
+                 color: fuchsia;
+                 animation: ecraser 150ms ease forwards;
+             }
+
+        }
+        
+        
+    }
+    .container-footer{
+        width: 100%;
+        color: white;
+        background-color: black;
+        margin-top: 10%;
     }
     
 }

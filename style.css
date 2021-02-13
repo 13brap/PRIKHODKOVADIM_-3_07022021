@@ -1,3 +1,88 @@
+@-webkit-keyframes liste {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  10% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes liste {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  10% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes ecraser {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes ecraser {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+    translate: 0px 10px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    translate: 0px 10px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+
+@keyframes ecraser {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @media all and (max-width: 600px) {
   body {
     width: auto;
@@ -38,6 +123,7 @@
     border-radius: 20px;
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
   }
   .container-navigation {
     margin-top: 150px;
@@ -61,9 +147,30 @@
     position: relative;
     padding-left: 10%;
     cursor: pointer;
+    -webkit-transition: background-color 400ms;
+    transition: background-color 400ms;
+    opacity: 0;
   }
   .container-navigation li:hover {
     background-color: rgba(147, 86, 220, 0.3);
+  }
+  .container-navigation__apparition1 {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-animation: apparition 1s forwards;
+            animation: apparition 1s forwards;
+  }
+  .container-navigation__apparition2 {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-animation: apparition 1.3s 200ms forwards;
+            animation: apparition 1.3s 200ms forwards;
+  }
+  .container-navigation__apparition3 {
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-animation: apparition 1.5s 400ms forwards;
+            animation: apparition 1.5s 400ms forwards;
   }
   .container-navigation span {
     padding: 6px 8px;
@@ -74,6 +181,83 @@
     position: absolute;
     margin-left: -14%;
     margin-bottom: 30%;
+  }
+  .container-cartes {
+    width: 100%;
+    height: auto;
+    background-color: #f6f6f6;
+  }
+  .container-cartes__cartes {
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .container-cartes__image {
+    height: 200px;
+    width: 90%;
+    -webkit-box-shadow: 0px 2px 2px silver;
+            box-shadow: 0px 2px 2px silver;
+    margin: auto;
+    border-radius: 20px;
+    background-image: url("restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+  .container-cartes__pied {
+    width: 90%;
+    height: 50px;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    margin: auto;
+    margin-top: -64px;
+  }
+  .container-cartes__pied h2 {
+    font-size: 17px;
+    margin-left: 10px;
+  }
+  .container-cartes__pied p {
+    font-size: 15px;
+    margin-top: -10px;
+    margin-left: 10px;
+  }
+  .container-cartes__coeur {
+    color: silver;
+    margin-left: 80%;
+    margin-top: -10%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+  }
+  .container-cartes__coeurplein {
+    color: silver;
+    margin-left: 80%;
+    margin-top: -10%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 1;
+  }
+  .container-cartes__input {
+    margin-left: 80%;
+    margin-top: -10%;
+    z-index: 3;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .container-cartes__input:checked + .container-cartes__coeurplein {
+    color: fuchsia;
+    -webkit-animation: ecraser 150ms ease forwards;
+            animation: ecraser 150ms ease forwards;
+  }
+  .container-footer {
+    width: 100%;
+    color: white;
+    background-color: black;
+    margin-top: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */

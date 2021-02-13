@@ -1,0 +1,156 @@
+@-webkit-keyframes liste {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  10% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes liste {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  10% {
+    -webkit-transform: scaleY(0.2);
+            transform: scaleY(0.2);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes ecraser {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes ecraser {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+    translate: 0px 10px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    translate: 0px 10px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0px 0px;
+  }
+}
+
+@keyframes ecraser {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media all and (max-width: 600px) {
+  body {
+    width: auto;
+    margin: auto;
+  }
+  .conteneur-entete {
+    width: 100%;
+    height: 50px;
+    background-color: #f6f6f6;
+  }
+  .conteneur-entete__fleche {
+    margin-left: 5%;
+    margin-top: 5%;
+    position: absolute;
+  }
+  .conteneur-entete img {
+    width: 50%;
+    margin: 0.7rem 25%;
+  }
+  .conteneur-entete a {
+    color: black;
+  }
+  .conteneur-background {
+    width: auto;
+    height: 500px;
+  }
+  .conteneur-background img {
+    width: 120vw;
+    height: 300px;
+  }
+  .conteneur-titre {
+    width: 100vw;
+    height: 200px;
+    margin: auto;
+    background-color: #f6f6f6;
+    margin-top: -15rem;
+    border-radius: 2rem;
+    position: absolute;
+  }
+  .conteneur-titre h1 {
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .conteneur-titre i {
+    margin-left: 85%;
+    margin-top: -11%;
+    position: absolute;
+  }
+  .conteneur-menu {
+    width: 100%;
+    height: 1500px;
+    background-color: #f6f6f6;
+    margin-top: -20%;
+    position: absolute;
+    margin: auto;
+  }
+  .conteneur-menu ul {
+    margin-left: -12%;
+    width: 100%;
+  }
+  .conteneur-menu li {
+    width: 90%;
+    height: 60px;
+    margin: auto;
+    background-color: slateblue;
+    list-style-type: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=style1.css.map */
