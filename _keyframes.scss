@@ -40,3 +40,114 @@
         transform: scaleY(1);
     }
 }
+@keyframes glisse{
+    0%{
+        width: 0px;
+        translate: (0);
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        width: 50px;
+        translate: (-50px);
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        height: 60px;
+        opacity: 1;
+    }
+}
+@keyframes tourne{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+@keyframes loader{
+    0%{
+        translate: (0px -250px);
+    }
+    50%{
+        width: 60px;
+        translate: (0px 0px);
+    }
+    55%{
+        height: 100px;
+    }
+    60%{
+        height: 50px;
+        width: 120px;
+        translate: (0px 30px);
+    }
+    70%{
+        width: 50px;
+        height: 70px;
+    }
+    100%{
+        translate: (0px -250px);
+    }
+}    
+@keyframes bounce { 
+         0%{ 
+            transform: none;
+            animation-timing-function: cubic-bezier(.78,.01,.83,.67);
+            box-shadow: none;
+             
+            } 
+        25%, 45%{ 
+             width: 90px; 
+             height: 110px;
+             box-shadow: 0 -5px 3px plum, 0 -6px 6px plum; 
+                }
+        50%{ 
+             width: 90px;
+             height: 110px;
+             transform: translateY(200px);
+             filter: blur(1px);
+             box-shadow: none;
+              }   
+        55%{
+            transform: translateY(190px);
+            width: 130px;
+            height: 70px;
+            box-shadow: -3px 0px 1px plum, 3px 0px 1px plum;
+            filter: none;
+        }
+        75%{
+            width: 90px;
+            height: 110px;
+            box-shadow: 0 5px 3px plum, 0 6px 6px plum;
+            }
+        100%{
+            transform: none;
+            animation-timing-function: ease-in;
+            box-shadow: none;
+            }
+}
+@keyframes disparition {
+    0% {
+        transform: scale(1);
+    }
+
+    99% {
+        transform: scale(1);
+    }
+  
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes ombre{
+    0%{
+        width: 20px;
+    }
+    50%{
+        width: 100px;
+    }
+    100%{
+        width: 20px;
+    }
+}

@@ -1,11 +1,46 @@
 @import "./variables";
 @import "./mixin";
 @import "./keyframes";
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @media all and (max-width: 800px){
     body{
         width: auto;
         margin: auto;
-
+        font-family: 'Roboto';
+    }
+    .conteneur-loader{
+        width: 100%;
+        height: 100%;
+        background: rgb(153,226,208);
+        background: radial-gradient(circle, rgba(153,226,208,1) 11%, rgba(208,195,224,1) 52%, rgba(208,195,224,1) 80%);
+        position: absolute;
+        z-index: 19;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: disparition 4s forwards;
+        position: fixed;
+        
+        &__donut{
+            width: 100px;
+            height: 100px;
+            animation: bounce 1s 4;
+            border-radius: 100%;
+            margin-bottom: 380px;
+           }
+           &__bordure{
+               width: 150px;
+               height: 100px;
+               position: absolute;
+               box-shadow: 0px 50px 30px black;
+               margin-top: 0px;
+               margin-left: -20px;
+               border-radius: 50%;
+               perspective: -90px;
+               transform: rotateX(80deg);
+               background-color: white;
+           }
     }
     .conteneur-entete{
         width: 100%;
@@ -43,11 +78,14 @@
           h1{
               margin-top: 5%;
               margin-left: 5%;
+              font-family: 'Shrikhand' , cursive;
+              font-weight: lighter;
           }
           i{
               margin-left: 85%;
-              margin-top: -11%;
+              margin-top: -12%;
               position: absolute;
+              font-size: 15px;
           }
     }
     .conteneur-menu{
@@ -60,7 +98,7 @@
         input{
             position: absolute;
             margin-left: 1rem;
-            margin-top: -2.8rem;
+            margin-top: -2rem;
             width: 100px;
             height: 20px;
             z-index: 6;
@@ -74,7 +112,7 @@
               cursor: pointer;
               z-index: 3;
               margin-top: 50px;
-
+              font-size: medium;
           }
           input:checked + .test{
             height: 200px;
@@ -103,21 +141,61 @@
               margin-top: 10px;
               opacity: 1;
               position: relative;
-              z-index: -2;
+              z-index: 8;
+              cursor: pointer;
+              overflow: hidden;
+          }
+          &__slide{
+              width: 50px;
+              height: 60px;
+              margin-top: 0px;
+              background-color: $tertiaire;
+              opacity: 1;
+              margin-left: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transform-origin: right;
+              transition: all 500ms;
+              
+              
+          }
+          li:hover > &__slide{
+              translate: (-50px);
+              transform-origin: right;
+          }
+          li:hover i{
+              transform: rotate(720deg);
+          }
+          &__slide > i{
+              opacity: 1;
+              transform: rotate(360deg);
+              margin-left: -100%;
+              color: white;
+              transform: rotate(180deg);
+              transition: transform 500ms;
           }
           
           span{
-            margin-left: 90%;
-            margin-top: -2.2rem;
-            position: absolute;
+            margin-left: -150%;
+            margin-top: 50%;
             z-index: 1;
           }
           h3{
               padding: 10px;
+              margin-top: -60px;
+              overflow: hidden;
           }
           p{
               margin-top: -25px;
               margin-left: 10px;
+              width: auto;
+              display: inline-block;
+              text-align: justify;
+              position: absolute;
+          }
+          &__slide > p{
+              margin-left: 20%;
           }
           button{
             background-image: linear-gradient(160deg, $secondaire, $primaire 90% );
@@ -136,8 +214,21 @@
         height: 200px;
         position: absolute;
         z-index: 2;
-        background-color: black;
+        background-color: rgb(53, 53, 53);
         margin-top: 900px;
-        color: white
+        color: white;
+          ul{
+              list-style: none;
+          }
+          i{
+              font-size: 12px;
+          }
+          a{
+              text-decoration: none;
+              color: white;
+          }
+          li{
+              margin-top: 10px;
+          }
     }
 }

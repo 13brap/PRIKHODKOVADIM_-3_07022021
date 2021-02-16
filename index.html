@@ -8,6 +8,12 @@
     <title>ohmyfood</title>
 </head>
 <body>
+    <div class="conteneur-loader">
+        <div>
+            <img src="logo/dish.png" alt="assiette" class="conteneur-loader__bordure">
+        </div>
+        <img src="logo/donut.png" alt="logo_oader" class="conteneur-loader__donut">
+    </div>
     <header class="container-header">
         <div class="container-header__logo"><img src="logo/ohmyfood.png" alt="logo"></div>
         <div class="container-header__lieu"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</div>
@@ -31,9 +37,9 @@
     <article class="container-cartes">
         <h1>Restaurants</h1>
         <section class="container-cartes__cartes">
-             <div class="container-cartes__image" onclick="location.href='https:booking.com';"></div>
+             <div class="container-cartes__image" onclick="location.href='menu2.html';"></div>
              <div class="container-cartes__pied">
-                 <h2>la palette du gout</h2>
+                 <h2>La palette du goût</h2>
                  <p>Ménilmontant</p>
                  <input type="checkbox" class="container-cartes__input">
                  <i class="fas fa-heart container-cartes__coeurplein"></i>
@@ -41,30 +47,30 @@
              </div>
         </section>
         <section class="container-cartes__cartes">
-            <div class="container-cartes__image"></div>
+            <div class="container-cartes__image image2" onclick="location.href='menu3.html';"></div>
             <div class="container-cartes__pied">
-                 <h2>la palette du gout</h2>
-                 <p>Ménilmontant</p>
+                 <h2>La note enchantée</h2>
+                 <p>Charonne</p>
                  <input type="checkbox" class="container-cartes__input">
                  <i class="fas fa-heart container-cartes__coeurplein"></i>
                  <i class="far fa-heart container-cartes__coeur"></i>
             </div>
        </section>
        <section class="container-cartes__cartes">
-        <div class="container-cartes__image"></div>
+        <div class="container-cartes__image image3" onclick="location.href='menu1.html';"></div>
         <div class="container-cartes__pied">
-                 <h2>la palette du gout</h2>
-                 <p>Ménilmontant</p>
+                 <h2>À la française</h2>
+                 <p>Cité rouge</p>
                  <input type="checkbox" class="container-cartes__input">
                  <i class="fas fa-heart container-cartes__coeurplein"></i>
                  <i class="far fa-heart container-cartes__coeur"></i>
         </div>
        </section>
        <section class="container-cartes__cartes">
-        <div class="container-cartes__image"></div>
+        <div class="container-cartes__image image4" onclick="location.href='menu4.html';"></div>
         <div class="container-cartes__pied">
-                 <h2>la palette du gout</h2>
-                 <p>Ménilmontant</p>
+                 <h2>Le délice des sens</h2>
+                 <p>Folie-Méricourt</p>
                  <input type="checkbox" class="container-cartes__input">
                  <i class="fas fa-heart container-cartes__coeurplein"></i>
                  <i class="far fa-heart container-cartes__coeur"></i>
@@ -74,10 +80,12 @@
 
     <footer class="container-footer">
         <img src="logo/ohmyfood@2x.svg" alt="logo_footer">
-        <p>Proposer un restaurant</p>
-        <p>Devenir proprietaire</p>
-        <p>Mentions legales</p>
-        <p>Contatc</p>
+        <ul>
+            <a href="#"><li><i class="fas fa-utensils"></i> proposer un restaurant</li></a>
+            <a href="#"><li><i class="fas fa-hands-helping"></i> devenir partenaire</li></a>
+            <a href="mailto:prikh.vadim@gmail.com"><li>contact</li></a>
+            <a href="#"><li>mention legale</li></a>
+        </ul>
 
     </footer>
     
