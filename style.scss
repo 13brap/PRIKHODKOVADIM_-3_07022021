@@ -4,13 +4,17 @@
 @import "./keyframes";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@media all and (max-width: 800px){
+
     body{
         width: auto;
         margin: auto;
         font-family: 'Roboto' , sans-serif;
+        @media all and (min-width: 1025px){
+            max-width: 1500px;
+        }
         
     }
+    
     .conteneur-loader{
         width: 100%;
         height: 100%;
@@ -21,7 +25,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: disparition .5s forwards;
+        animation: disparition 3s forwards;
         position: fixed;
         
         &__donut{
@@ -45,8 +49,11 @@
            }
     }
     .container-header{
-        width: 100%;
+        width: auto;
         height: 200px;
+        @media all and (min-width: 1025px){
+            max-width: 1500px;
+        }
           img{
               width: 170px; 
           }
@@ -63,7 +70,7 @@
               font-size: 1.7em;
           }
           &__logo{
-              width: 100vw;
+              width: 100%;
               height: 8vh;
               box-shadow: 0px 2px 2px black;
               display: flex;
@@ -105,6 +112,10 @@
     .container-navigation{
         margin-top: 220px;
         margin-bottom: 15%;
+        @media all and (min-width: 600px){
+            height: 20%;
+            margin-left: 10%;
+        }
         h1{
             margin-left: 20px;
             font-size: 20px;
@@ -113,11 +124,24 @@
           &__liste{
               list-style: none;
               font-weight: bold;
+              margin: auto;
+              width: auto;
+              @media all and (min-width: 600px){
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  width: auto;
+                  margin-left: -20%;
+              }
               
           }
           i{
               color: rgb(128, 128, 128);
               margin-right: 20px;
+              transition: all .2s;
+              @media all and (min-width: 600px){
+                  margin-left: -100%;
+              }
           }
           li:hover > i{
             color: rgba(147, 86, 220, .8);
@@ -125,7 +149,6 @@
          li{
               margin-top: 20px;
               width: 80%;
-              margin-left: -10px;
               border-radius: 20px;
               @include bckgr-grey;
               padding: 25px 10px;
@@ -135,6 +158,18 @@
               cursor: pointer;
               transition: background-color 400ms;
               opacity: 0;
+              transition: all .2s;
+              @media all and (min-width: 600px){
+                  height: 200px;
+                  width: 10vw;
+                  margin: 2rem;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+              }
+
+              
                 &:hover{
                    background-color: rgba(147, 86, 220, .1); 
                }
@@ -160,6 +195,10 @@
               position: absolute;
               margin-left: -14%;
               margin-bottom: 30%;
+              @media all and (min-width: 600px){
+                  margin-top: -13vh;
+                  margin-left: -9vw;
+              }
           }
     }
     .container-cartes{
@@ -167,7 +206,10 @@
         height: auto;
         @include bckgr-grey;
         padding-top: 20px;
-        padding-bottom: 100px;
+        padding-bottom: 200px;
+        @media all and (min-width: 1025px){
+            padding-bottom: 20%;
+        }
           h1{
               margin-left: 5%;
           }
@@ -184,11 +226,20 @@
               color: darken($tertiaire, 40%);
               margin-left: 70%;
               margin-top: 5%;
+              @media all and (min-width: 1025px){
+                  margin-left: 300px;
+                  margin-top: 2%;
+              }
           }
 
           &__cartes{
               margin-top: 20px;
               cursor: pointer;
+              @media all and (min-width: 1025px){
+                  display: flex;
+                  flex-direction: row;
+                  margin-left: 50px;
+              }
           }
           &__image{
               height: 60vmin;
@@ -200,6 +251,15 @@
               background-size: 100% 100%;
               background-repeat: no-repeat;
               z-index: 0;
+              @media all and (min-width: 600px){
+                  height: 40vmin;
+                  width: 70vmin;
+              }
+              @media all and (min-width: 1025px){
+                  height: 300px;
+                  width: 400px;
+              }
+            
               
           }
           .image2{
@@ -217,51 +277,118 @@
           }
           &__pied{
             width: 90vmin;
-            height: 9vmax;
+            height: 4.2rem;
             background-color: white;
             border-bottom-right-radius: 20px;
             border-bottom-left-radius: 20px ;
             z-index: 1;
             margin: auto;
             margin-top: -80px;
-            h2 {font-size: 17px; margin-left: 10px; padding-top: 10px;}
-            p {font-size: 15px; margin-top: -10px; margin-left: 10px; font-weight: 300;}
+            h2 {
+                font-size: 17px;
+                margin-left: 10px;
+                padding-top: 10px;
+                  @media all and (min-width: 1025px){
+                      border-right: 2px solid $tertiaire;
+                      padding-right: 20px;
+                      padding-bottom: 5px;
+                  }
+            }
+            p {
+                font-size: 15px; 
+                margin-top: -10px; 
+                margin-left: 10px; 
+                font-weight: 300;
+                @media all and (min-width: 1025px){
+                    margin-top: 15px;
+                    margin-left: 50px;
+                    border-right: 2px solid $tertiaire;
+                    padding-right: 20px;
+                    padding-bottom: 6px;
+                    padding-top: 5px;
+                }
+            }
+ 
+            @media all and (min-width: 600px){
+                width: 70vmin;
+                height: 4.2rem;
+            }
+            @media all and (min-width: 1025px){
+                width: 60%;
+                height: 300px;
+                border-radius: 20px;
+                margin-top: 0px;
+                margin-left: 10px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+           
         }
         &__coeur{
             color: silver;
-            margin-left: 78vw;
-            margin-top: -6vh;
+            margin-left: 75%;
+            margin-top: -40px;
             position: absolute;
             cursor: pointer;
             z-index: 1;
             opacity: 1;
             font-size: 21px;
+            @media all and (min-width: 600px){
+                margin-left: 65%;
+                margin-top: -40px;
+            }
+            @media all and (min-width: 1025px){
+                margin-left: 40%;
+                margin-top: 0;
+            }
         }
         &__coeurplein{
             color: silver;
-            margin-left: 78vw;
-            margin-top: -6vh;
+            margin-left: 75%;
+            margin-top: -40px;
             position: absolute;
             cursor: pointer;
             z-index: 2;
             opacity: 0;
             font-size: 22px;
+            @media all and (min-width: 600px){
+                margin-left: 65%;
+                margin-top: -40px;
+            }
+            @media all and (min-width: 1025px){
+                margin-left: 40%;
+                margin-top: 0;
+            }
         }
         &__input{
-            margin-left: 78vw;
-            margin-top: -6vh;
+            margin-left: 75%;
+            margin-top: -40px;
             z-index: 3;
             position: absolute;
             opacity: 0;
             cursor: pointer;
+            width: 22px;
+            height: 22px;
              &:checked + .container-cartes__coeurplein{
                  color: fuchsia;
                  animation: ecraser 150ms ease forwards;
                  opacity: 1;
-                 background: -webkit-linear-gradient(rgb(243, 128, 243), rgb(120, 5, 131));
-                 -webkit-background-clip: text;
+                 background: -webkit-linear-gradient(30deg, rgba(243, 128, 243, .7), rgba(120, 5, 131, .7));
+                 background-clip: text;
                  -webkit-text-fill-color: transparent;
              }
+             &:checked ~ .container-cartes__coeur{
+                 opacity: 0;
+             }
+             @media all and (min-width: 600px){
+                margin-left: 65%;
+                margin-top: -40px;
+            }
+            @media all and (min-width: 1025px){
+                margin-left: 40%;
+                margin-top: 0;
+            }
 
         }
         
@@ -271,8 +398,9 @@
         width: 100%;
         color: white;
         background-color: rgb(53, 53, 53,);
-        margin-top: 0%;
+        margin-top: -10%;
         padding-bottom: 20px;
+        padding-top: 4%;
           li{
               list-style: none;
               margin-top: 10px;
@@ -281,6 +409,16 @@
           a{
               text-decoration: none;
           }
+           p{
+              font-family: 'Shrikhand';
+              font-size: 1.5em;
+              margin-left: 10%;
+          }
+          i{
+              padding-right: 5px;
+          }
+          .fa-utensils{
+              padding-right: 10px;
+          }
     }
     
-}
