@@ -1,7 +1,7 @@
 @keyframes apparition{
     0%{
         opacity: 0;
-        translate: (0px 100px);
+        transform: translateY(100px);
         transform-origin: top;
     }
     
@@ -11,7 +11,7 @@
     }
     100%{
         opacity: 1;
-        translate: (0px 0px);
+        transform: translateY(0px);
         transform: scaleY(1);
         transform-origin: top;
     }

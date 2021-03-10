@@ -3,7 +3,8 @@
 @-webkit-keyframes apparition {
   0% {
     opacity: 0;
-    translate: 0px 100px;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     -webkit-transform-origin: top;
             transform-origin: top;
   }
@@ -14,7 +15,8 @@
   }
   100% {
     opacity: 1;
-    translate: 0px 0px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
     -webkit-transform-origin: top;
@@ -24,7 +26,8 @@
 @keyframes apparition {
   0% {
     opacity: 0;
-    translate: 0px 100px;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
     -webkit-transform-origin: top;
             transform-origin: top;
   }
@@ -35,7 +38,8 @@
   }
   100% {
     opacity: 1;
-    translate: 0px 0px;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
     -webkit-transform-origin: top;
@@ -406,8 +410,6 @@ body {
   margin-top: 0px;
   margin-left: -20px;
   border-radius: 50%;
-  -webkit-perspective: -90px;
-          perspective: -90px;
   -webkit-transform: rotateX(80deg);
           transform: rotateX(80deg);
   background-color: white;
@@ -484,13 +486,9 @@ body {
   padding: 1rem 2rem;
 }
 
-.container-header__explorez h2 {
-  font-weight: 1;
-}
-
 .container-header__explorez button {
   background: #ff79da;
-  background: linear-gradient(170deg, rgba(255, 121, 218, 0.7) 0%, rgba(147, 86, 220, 0.7) 100%);
+  background: linear-gradient(170deg, rgba(255, 121, 218, 0.9) 0%, rgba(147, 86, 220, 0.9) 100%);
   border-radius: 30px;
   border: none;
   padding: 15px 20px;
@@ -499,6 +497,17 @@ body {
   font-weight: 600;
   font-size: 1.4em;
   margin: 15px 0 30px 0;
+  -webkit-box-shadow: 0px 5px 5px silver;
+          box-shadow: 0px 5px 5px silver;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.container-header__explorez button:hover {
+  background: #ff13be;
+  background: linear-gradient(170deg, rgba(255, 70, 204, 0.9) 0%, rgba(120, 44, 211, 0.9) 100%);
+  -webkit-box-shadow: 0px 5px 10px black;
+          box-shadow: 0px 5px 10px black;
 }
 
 .container-navigation {
@@ -513,7 +522,7 @@ body {
   }
 }
 
-.container-navigation h1 {
+.container-navigation h2 {
   margin-left: 20px;
   font-size: 20px;
   font-weight: 700;
@@ -656,7 +665,7 @@ body {
   }
 }
 
-.container-cartes h1 {
+.container-cartes h2 {
   margin-left: 5%;
 }
 
@@ -760,14 +769,14 @@ body {
   margin-top: -80px;
 }
 
-.container-cartes__pied h2 {
+.container-cartes__pied h3 {
   font-size: 17px;
   margin-left: 10px;
   padding-top: 10px;
 }
 
 @media all and (min-width: 1025px) {
-  .container-cartes__pied h2 {
+  .container-cartes__pied h3 {
     border-right: 2px solid #99E2D0;
     padding-right: 20px;
     padding-bottom: 5px;
@@ -885,8 +894,8 @@ body {
           animation: ecraser 150ms ease forwards;
   opacity: 1;
   background: -webkit-linear-gradient(30deg, rgba(243, 128, 243, 0.7), rgba(120, 5, 131, 0.7));
-  background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .container-cartes__input:checked ~ .container-cartes__coeur {
@@ -924,12 +933,13 @@ body {
 
 .container-footer a {
   text-decoration: none;
+  color: white;
 }
 
 .container-footer p {
   font-family: 'Shrikhand';
   font-size: 1.5em;
-  margin-left: 10%;
+  margin-left: 40px;
 }
 
 .container-footer i {

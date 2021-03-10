@@ -43,7 +43,6 @@
                margin-top: 0px;
                margin-left: -20px;
                border-radius: 50%;
-               perspective: -90px;
                transform: rotateX(80deg);
                background-color: white;
            }
@@ -92,11 +91,10 @@
               margin-top: -5px;
               text-align: center;
               font-size: 10px;
-              h2{font-weight: 1;}
               padding: 1rem 2rem;
                 button{
                     background: rgb(255,121,218);
-                    background: linear-gradient(170deg, rgba(255,121,218,.7) 0%, rgba(147,86,220,.7) 100%);
+                    background: linear-gradient(170deg, rgba(255,121,218,.9) 0%, rgba(147,86,220,.9) 100%);
                     border-radius: 30px;
                     border: none;
                     padding: 15px 20px;
@@ -105,7 +103,15 @@
                     font-weight: 600;
                     font-size: 1.4em;
                     margin: 15px 0 30px 0;
+                    box-shadow: 0px 5px 5px silver;
+                    transition: all 0.2s;
+                      &:hover{
+                        background: darken(rgb(255,121,218), 20%);
+                        background: linear-gradient(170deg, darken(rgba(255,121,218,.9), 10%) 0%, darken(rgba(147,86,220,.9), 10%) 100%);
+                        box-shadow: 0px 5px 10px black;
+                      }
                 }
+
           }
          
     }
@@ -116,7 +122,7 @@
             height: 20%;
             margin-left: 10%;
         }
-        h1{
+        h2{
             margin-left: 20px;
             font-size: 20px;
             font-weight: 700;
@@ -210,7 +216,7 @@
         @media all and (min-width: 1025px){
             padding-bottom: 20%;
         }
-          h1{
+          h2{
               margin-left: 5%;
           }
           &__nouveau{
@@ -284,7 +290,7 @@
             z-index: 1;
             margin: auto;
             margin-top: -80px;
-            h2 {
+            h3 {
                 font-size: 17px;
                 margin-left: 10px;
                 padding-top: 10px;
@@ -375,8 +381,8 @@
                  animation: ecraser 150ms ease forwards;
                  opacity: 1;
                  background: -webkit-linear-gradient(30deg, rgba(243, 128, 243, .7), rgba(120, 5, 131, .7));
-                 background-clip: text;
                  -webkit-text-fill-color: transparent;
+                 -webkit-background-clip: text;
              }
              &:checked ~ .container-cartes__coeur{
                  opacity: 0;
@@ -408,11 +414,12 @@
           }
           a{
               text-decoration: none;
+              color: white;
           }
            p{
               font-family: 'Shrikhand';
               font-size: 1.5em;
-              margin-left: 10%;
+              margin-left: 40px;
           }
           i{
               padding-right: 5px;

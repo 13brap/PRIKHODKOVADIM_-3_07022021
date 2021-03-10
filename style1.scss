@@ -128,8 +128,8 @@
           #checkcoeur:checked ~ &__coeurplein{
               opacity: 1;
               background: -webkit-linear-gradient(30deg, rgba(243, 128, 243, .7), rgba(120, 5, 131, .7));
-                 background-clip: text;
                  -webkit-text-fill-color: transparent;
+                 -webkit-background-clip: text;
           }
           #checkcoeur:checked ~ &__coeur{
               opacity: 0;
@@ -141,7 +141,7 @@
         @include bckgr-grey;
         margin-top: -150px;
         position: relative;
-        #conteneur-menu__ckeckplat{
+        .conteneur-menu__ckeckplat{
             position: absolute;
             margin-left: 1rem;
             margin-top: -2rem;
@@ -155,7 +155,7 @@
                 width: 300px;
             }
         }
-        #checkliste{
+        .checkliste{
             position: absolute;
             opacity: 0;
             z-index: 10;
@@ -179,23 +179,21 @@
                   width: 100%;
               }
           }
-          #conteneur-menu__ckeckplat:checked + .test{
-            height: 200px;
+          .conteneur-menu__ckeckplat:checked + .test{
+            height: auto;
             opacity: 1;
             transform-origin: top;
-            height: 220px;
-            overflow: scroll;
             translate: 0px;
           }
-          #conteneur-menu__ckeckplat:checked + .test > &__apparition1{
+          .conteneur-menu__ckeckplat:checked + .test > &__apparition1{
               transform-origin: bottom;
               animation: apparition 1s forwards;
           }
-          #conteneur-menu__ckeckplat:checked + .test > &__apparition2{
+          .conteneur-menu__ckeckplat:checked + .test > &__apparition2{
             transform-origin: bottom;
             animation: apparition 1.3s 200ms forwards;
           }
-          #conteneur-menu__ckeckplat:checked + .test > &__apparition3{
+          .conteneur-menu__ckeckplat:checked + .test > &__apparition3{
             transform-origin: bottom;
             animation: apparition 1.5s 400ms forwards;
           }
@@ -240,17 +238,17 @@
               
               
           }
-          #checkliste:checked + &__slide{
-              translate: (-50px);
+          .checkliste:checked + &__slide{
+              transform: translateX(-50px);
               transform-origin: right;
           }
-          #checkliste:checked ~ p{
+          .checkliste:checked ~ p{
               width: 200px;
           }
-          #checkliste:checked ~ h3{
+          .checkliste:checked ~ h3{
             width: 250px;
           } 
-          #checkliste:checked + &__slide > i{
+          .checkliste:checked + &__slide > i{
               transform: rotate(720deg);
           }
           &__slide > i{
@@ -310,6 +308,13 @@
                 color: white;
                 font-size: 17px;
                 font-weight: 500;
+                box-shadow: 0px 5px 5px silver;
+                z-index: 4;
+                  &:hover{
+                      background: darken(rgb(255,121,218), 20%);
+                      background: linear-gradient(170deg, darken(rgba(255,121,218,.9), 10%) 0%, darken(rgba(147,86,220,.9), 10%) 100%);
+                      box-shadow: 0px 5px 10px black;
+                    }
               }
           }
           
