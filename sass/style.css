@@ -96,7 +96,8 @@
 @-webkit-keyframes glisse {
   0% {
     width: 0px;
-    translate: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
     opacity: 0;
   }
   1% {
@@ -104,7 +105,8 @@
   }
   100% {
     width: 50px;
-    translate: -50px;
+    -webkit-transform: translate(-50px);
+            transform: translate(-50px);
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     height: 60px;
@@ -115,7 +117,8 @@
 @keyframes glisse {
   0% {
     width: 0px;
-    translate: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
     opacity: 0;
   }
   1% {
@@ -123,7 +126,8 @@
   }
   100% {
     width: 50px;
-    translate: -50px;
+    -webkit-transform: translate(-50px);
+            transform: translate(-50px);
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     height: 60px;
@@ -155,11 +159,13 @@
 
 @-webkit-keyframes loader {
   0% {
-    translate: 0px -250px;
+    -webkit-transform: translate(0px, -250px);
+            transform: translate(0px, -250px);
   }
   50% {
     width: 60px;
-    translate: 0px 0px;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   55% {
     height: 100px;
@@ -167,24 +173,28 @@
   60% {
     height: 50px;
     width: 120px;
-    translate: 0px 30px;
+    -webkit-transform: translate(0px, 30px);
+            transform: translate(0px, 30px);
   }
   70% {
     width: 50px;
     height: 70px;
   }
   100% {
-    translate: 0px -250px;
+    -webkit-transform: translate(0px, -250px);
+            transform: translate(0px, -250px);
   }
 }
 
 @keyframes loader {
   0% {
-    translate: 0px -250px;
+    -webkit-transform: translate(0px, -250px);
+            transform: translate(0px, -250px);
   }
   50% {
     width: 60px;
-    translate: 0px 0px;
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
   55% {
     height: 100px;
@@ -192,14 +202,16 @@
   60% {
     height: 50px;
     width: 120px;
-    translate: 0px 30px;
+    -webkit-transform: translate(0px, 30px);
+            transform: translate(0px, 30px);
   }
   70% {
     width: 50px;
     height: 70px;
   }
   100% {
-    translate: 0px -250px;
+    -webkit-transform: translate(0px, -250px);
+            transform: translate(0px, -250px);
   }
 }
 
@@ -722,7 +734,7 @@ body {
           box-shadow: 0px 2px 5px silver;
   margin: auto;
   border-radius: 20px;
-  background-image: url("restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   z-index: 0;
@@ -743,19 +755,31 @@ body {
 }
 
 .container-cartes .image2 {
-  background-image: url("restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-size: 100% 150%;
   background-position-y: 80%;
 }
 
 .container-cartes .image3 {
-  background-image: url("restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   background-position-y: -50px;
 }
 
+@media all and (min-width: 1025px) {
+  .container-cartes .image3 {
+    background-size: 100% 120%;
+  }
+}
+
 .container-cartes .image4 {
-  background-image: url("restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
   background-position-y: -50px;
+}
+
+@media all and (min-width: 1025px) {
+  .container-cartes .image4 {
+    background-size: 100% 120%;
+  }
 }
 
 .container-cartes__pied {

@@ -41,7 +41,7 @@
 @keyframes glisse{
     0%{
         width: 0px;
-        translate: (0);
+        transform: translate(0);
         opacity: 0;
     }
     1%{
@@ -49,7 +49,7 @@
     }
     100%{
         width: 50px;
-        translate: (-50px);
+        transform: translate(-50px);
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
         height: 60px;
@@ -66,11 +66,11 @@
 }
 @keyframes loader{
     0%{
-        translate: (0px -250px);
+        transform: translate(0px, -250px);
     }
     50%{
         width: 60px;
-        translate: (0px 0px);
+        transform: translate(0px, 0px);
     }
     55%{
         height: 100px;
@@ -78,14 +78,14 @@
     60%{
         height: 50px;
         width: 120px;
-        translate: (0px 30px);
+        transform: translate(0px, 30px);
     }
     70%{
         width: 50px;
         height: 70px;
     }
     100%{
-        translate: (0px -250px);
+        transform: translate(0px, -250px);
     }
 }    
 @keyframes bounce { 
